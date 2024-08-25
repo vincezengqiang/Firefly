@@ -1,0 +1,702 @@
+
+===================================BUG REPORT===================================
+Welcome to bitsandbytes. For bug reports, please run
+
+python -m bitsandbytes
+
+ and submit this information together with your error trace to: https://github.com/TimDettmers/bitsandbytes/issues
+================================================================================
+
+===================================BUG REPORT===================================
+Welcome to bitsandbytes. For bug reports, please run
+
+python -m bitsandbytes
+
+ and submit this information together with your error trace to: https://github.com/TimDettmers/bitsandbytes/issues
+================================================================================
+
+===================================BUG REPORT===================================
+Welcome to bitsandbytes. For bug reports, please run
+
+python -m bitsandbytes
+
+ and submit this information together with your error trace to: https://github.com/TimDettmers/bitsandbytes/issues
+================================================================================
+
+===================================BUG REPORT===================================
+Welcome to bitsandbytes. For bug reports, please run
+
+python -m bitsandbytes
+
+ and submit this information together with your error trace to: https://github.com/TimDettmers/bitsandbytes/issues
+================================================================================
+bin /root/miniconda3/lib/python3.8/site-packages/bitsandbytes/libbitsandbytes_cuda118.so
+/root/miniconda3/lib/python3.8/site-packages/bitsandbytes/cuda_setup/main.py:149: UserWarning: WARNING: The following directories listed in your path were found to be non-existent: {PosixPath('https'), PosixPath('8448'), PosixPath('//u475573-a57f-a443dfdc.nma1.seetacloud.com')}
+  warn(msg)
+/root/miniconda3/lib/python3.8/site-packages/bitsandbytes/cuda_setup/main.py:149: UserWarning: WARNING: The following directories listed in your path were found to be non-existent: {PosixPath('Asia/Shanghai')}
+  warn(msg)
+/root/miniconda3/lib/python3.8/site-packages/bitsandbytes/cuda_setup/main.py:149: UserWarning: WARNING: The following directories listed in your path were found to be non-existent: {PosixPath('/tmp/torchelastic_1gieyrrq/none_678qzdo1/attempt_0/2/error.json')}
+  warn(msg)
+CUDA_SETUP: WARNING! libcudart.so not found in any environmental path. Searching in backup paths...
+/root/miniconda3/lib/python3.8/site-packages/bitsandbytes/cuda_setup/main.py:149: UserWarning: Found duplicate ['libcudart.so', 'libcudart.so.11.0', 'libcudart.so.12.0'] files: {PosixPath('/usr/local/cuda/lib64/libcudart.so.11.0'), PosixPath('/usr/local/cuda/lib64/libcudart.so')}.. We'll flip a coin and try one of these, in order to fail forward.
+Either way, this might cause trouble in the future:
+If you get `CUDA error: invalid device function` errors, the above might be the cause and the solution is to make sure only one ['libcudart.so', 'libcudart.so.11.0', 'libcudart.so.12.0'] in the paths that we search based on your env.
+  warn(msg)
+CUDA SETUP: CUDA runtime path found: /usr/local/cuda/lib64/libcudart.so.11.0
+CUDA SETUP: Highest compute capability among GPUs detected: 8.0
+CUDA SETUP: Detected CUDA version 118
+CUDA SETUP: Loading binary /root/miniconda3/lib/python3.8/site-packages/bitsandbytes/libbitsandbytes_cuda118.so...
+bin /root/miniconda3/lib/python3.8/site-packages/bitsandbytes/libbitsandbytes_cuda118.so
+bin /root/miniconda3/lib/python3.8/site-packages/bitsandbytes/libbitsandbytes_cuda118.so
+/root/miniconda3/lib/python3.8/site-packages/bitsandbytes/cuda_setup/main.py:149: UserWarning: WARNING: The following directories listed in your path were found to be non-existent: {PosixPath('https'), PosixPath('//u475573-a57f-a443dfdc.nma1.seetacloud.com'), PosixPath('8448')}
+  warn(msg)
+/root/miniconda3/lib/python3.8/site-packages/bitsandbytes/cuda_setup/main.py:149: UserWarning: WARNING: The following directories listed in your path were found to be non-existent: {PosixPath('Asia/Shanghai')}
+  warn(msg)
+/root/miniconda3/lib/python3.8/site-packages/bitsandbytes/cuda_setup/main.py:149: UserWarning: WARNING: The following directories listed in your path were found to be non-existent: {PosixPath('/tmp/torchelastic_1gieyrrq/none_678qzdo1/attempt_0/0/error.json')}
+  warn(msg)
+CUDA_SETUP: WARNING! libcudart.so not found in any environmental path. Searching in backup paths...
+/root/miniconda3/lib/python3.8/site-packages/bitsandbytes/cuda_setup/main.py:149: UserWarning: Found duplicate ['libcudart.so', 'libcudart.so.11.0', 'libcudart.so.12.0'] files: {PosixPath('/usr/local/cuda/lib64/libcudart.so'), PosixPath('/usr/local/cuda/lib64/libcudart.so.11.0')}.. We'll flip a coin and try one of these, in order to fail forward.
+Either way, this might cause trouble in the future:
+If you get `CUDA error: invalid device function` errors, the above might be the cause and the solution is to make sure only one ['libcudart.so', 'libcudart.so.11.0', 'libcudart.so.12.0'] in the paths that we search based on your env.
+  warn(msg)
+CUDA SETUP: CUDA runtime path found: /usr/local/cuda/lib64/libcudart.so
+CUDA SETUP: Highest compute capability among GPUs detected: 8.0
+CUDA SETUP: Detected CUDA version 118
+CUDA SETUP: Loading binary /root/miniconda3/lib/python3.8/site-packages/bitsandbytes/libbitsandbytes_cuda118.so...
+/root/miniconda3/lib/python3.8/site-packages/bitsandbytes/cuda_setup/main.py:149: UserWarning: WARNING: The following directories listed in your path were found to be non-existent: {PosixPath('//u475573-a57f-a443dfdc.nma1.seetacloud.com'), PosixPath('8448'), PosixPath('https')}
+  warn(msg)
+/root/miniconda3/lib/python3.8/site-packages/bitsandbytes/cuda_setup/main.py:149: UserWarning: WARNING: The following directories listed in your path were found to be non-existent: {PosixPath('Asia/Shanghai')}
+  warn(msg)
+/root/miniconda3/lib/python3.8/site-packages/bitsandbytes/cuda_setup/main.py:149: UserWarning: WARNING: The following directories listed in your path were found to be non-existent: {PosixPath('/tmp/torchelastic_1gieyrrq/none_678qzdo1/attempt_0/3/error.json')}
+  warn(msg)
+CUDA_SETUP: WARNING! libcudart.so not found in any environmental path. Searching in backup paths...
+/root/miniconda3/lib/python3.8/site-packages/bitsandbytes/cuda_setup/main.py:149: UserWarning: Found duplicate ['libcudart.so', 'libcudart.so.11.0', 'libcudart.so.12.0'] files: {PosixPath('/usr/local/cuda/lib64/libcudart.so'), PosixPath('/usr/local/cuda/lib64/libcudart.so.11.0')}.. We'll flip a coin and try one of these, in order to fail forward.
+Either way, this might cause trouble in the future:
+If you get `CUDA error: invalid device function` errors, the above might be the cause and the solution is to make sure only one ['libcudart.so', 'libcudart.so.11.0', 'libcudart.so.12.0'] in the paths that we search based on your env.
+  warn(msg)
+CUDA SETUP: CUDA runtime path found: /usr/local/cuda/lib64/libcudart.so
+CUDA SETUP: Highest compute capability among GPUs detected: 8.0
+CUDA SETUP: Detected CUDA version 118
+CUDA SETUP: Loading binary /root/miniconda3/lib/python3.8/site-packages/bitsandbytes/libbitsandbytes_cuda118.so...
+bin /root/miniconda3/lib/python3.8/site-packages/bitsandbytes/libbitsandbytes_cuda118.so
+/root/miniconda3/lib/python3.8/site-packages/bitsandbytes/cuda_setup/main.py:149: UserWarning: WARNING: The following directories listed in your path were found to be non-existent: {PosixPath('https'), PosixPath('8448'), PosixPath('//u475573-a57f-a443dfdc.nma1.seetacloud.com')}
+  warn(msg)
+/root/miniconda3/lib/python3.8/site-packages/bitsandbytes/cuda_setup/main.py:149: UserWarning: WARNING: The following directories listed in your path were found to be non-existent: {PosixPath('Asia/Shanghai')}
+  warn(msg)
+/root/miniconda3/lib/python3.8/site-packages/bitsandbytes/cuda_setup/main.py:149: UserWarning: WARNING: The following directories listed in your path were found to be non-existent: {PosixPath('/tmp/torchelastic_1gieyrrq/none_678qzdo1/attempt_0/1/error.json')}
+  warn(msg)
+CUDA_SETUP: WARNING! libcudart.so not found in any environmental path. Searching in backup paths...
+/root/miniconda3/lib/python3.8/site-packages/bitsandbytes/cuda_setup/main.py:149: UserWarning: Found duplicate ['libcudart.so', 'libcudart.so.11.0', 'libcudart.so.12.0'] files: {PosixPath('/usr/local/cuda/lib64/libcudart.so'), PosixPath('/usr/local/cuda/lib64/libcudart.so.11.0')}.. We'll flip a coin and try one of these, in order to fail forward.
+Either way, this might cause trouble in the future:
+If you get `CUDA error: invalid device function` errors, the above might be the cause and the solution is to make sure only one ['libcudart.so', 'libcudart.so.11.0', 'libcudart.so.12.0'] in the paths that we search based on your env.
+  warn(msg)
+CUDA SETUP: CUDA runtime path found: /usr/local/cuda/lib64/libcudart.so
+CUDA SETUP: Highest compute capability among GPUs detected: 8.0
+CUDA SETUP: Detected CUDA version 118
+CUDA SETUP: Loading binary /root/miniconda3/lib/python3.8/site-packages/bitsandbytes/libbitsandbytes_cuda118.so...
+[2024-08-23 01:28:17,220] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-08-23 01:28:17,250] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-08-23 01:28:17,266] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-08-23 01:28:17,290] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-08-23 01:28:19,646] [WARNING] [comm.py:152:init_deepspeed_backend] NCCL backend in DeepSpeed not yet implemented
+[2024-08-23 01:28:19,646] [INFO] [comm.py:594:init_distributed] cdb=None
+[2024-08-23 01:28:19,646] [INFO] [comm.py:625:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+[2024-08-23 01:28:19,687] [WARNING] [comm.py:152:init_deepspeed_backend] NCCL backend in DeepSpeed not yet implemented
+[2024-08-23 01:28:19,688] [INFO] [comm.py:594:init_distributed] cdb=None
+[2024-08-23 01:28:19,692] [WARNING] [comm.py:152:init_deepspeed_backend] NCCL backend in DeepSpeed not yet implemented
+[2024-08-23 01:28:19,692] [INFO] [comm.py:594:init_distributed] cdb=None
+[2024-08-23 01:28:19,741] [WARNING] [comm.py:152:init_deepspeed_backend] NCCL backend in DeepSpeed not yet implemented
+[2024-08-23 01:28:19,741] [INFO] [comm.py:594:init_distributed] cdb=None
+2024-08-23 01:28:20.401 | INFO     | __main__:setup_everything:57 - train_args:TrainingArguments(
+_n_gpu=1,
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+auto_find_batch_size=False,
+bf16=True,
+bf16_full_eval=False,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_persistent_workers=False,
+dataloader_pin_memory=True,
+ddp_backend=None,
+ddp_broadcast_buffers=None,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+ddp_timeout=1800,
+debug=[],
+deepspeed=/root/autodl-tmp/a00_Firefly/train_args/ds_z3_config.json,
+disable_tqdm=False,
+dispatch_batches=None,
+do_eval=False,
+do_predict=False,
+do_train=False,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_steps=None,
+evaluation_strategy=no,
+fp16=False,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[],
+fsdp_config={'min_num_params': 0, 'xla': False, 'xla_fsdp_grad_ckpt': False},
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_determinism=False,
+gradient_accumulation_steps=16,
+gradient_checkpointing=True,
+gradient_checkpointing_kwargs=None,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_always_push=False,
+hub_model_id=None,
+hub_private_repo=False,
+hub_strategy=every_save,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_inputs_for_metrics=False,
+include_num_input_tokens_seen=False,
+include_tokens_per_second=False,
+jit_mode_eval=False,
+label_names=None,
+label_smoothing_factor=0.0,
+learning_rate=1e-05,
+length_column_name=length,
+load_best_model_at_end=False,
+local_rank=2,
+log_level=passive,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=/root/autodl-tmp/a00_Firefly/backup/firefly-qwen-7b-sft-full/runs/Aug23_01-28-19_autodl-container-cb894da57f-a443dfdc,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=1,
+logging_strategy=steps,
+lr_scheduler_kwargs={},
+lr_scheduler_type=cosine,
+max_grad_norm=1.0,
+max_steps=-1,
+metric_for_best_model=None,
+mp_parameters=,
+neftune_noise_alpha=None,
+no_cuda=False,
+num_train_epochs=5,
+optim=adamw_hf,
+optim_args=None,
+output_dir=/root/autodl-tmp/a00_Firefly/backup/firefly-qwen-7b-sft-full,
+overwrite_output_dir=False,
+past_index=-1,
+per_device_eval_batch_size=8,
+per_device_train_batch_size=1,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+ray_scope=last,
+remove_unused_columns=False,
+report_to=['tensorboard'],
+resume_from_checkpoint=None,
+run_name=/root/autodl-tmp/a00_Firefly/backup/firefly-qwen-7b-sft-full,
+save_on_each_node=False,
+save_only_model=True,
+save_safetensors=True,
+save_steps=500,
+save_strategy=steps,
+save_total_limit=1,
+seed=42,
+skip_memory_metrics=True,
+split_batches=False,
+tf32=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+use_cpu=False,
+use_ipex=False,
+use_legacy_prediction_loop=False,
+use_mps_device=False,
+warmup_ratio=0.02,
+warmup_steps=0,
+weight_decay=0,
+)
+2024-08-23 01:28:20.402 | INFO     | __main__:init_components:369 - Initializing components...
+2024-08-23 01:28:20.405 | INFO     | __main__:setup_everything:57 - train_args:TrainingArguments(
+_n_gpu=1,
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+auto_find_batch_size=False,
+bf16=True,
+bf16_full_eval=False,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_persistent_workers=False,
+dataloader_pin_memory=True,
+ddp_backend=None,
+ddp_broadcast_buffers=None,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+ddp_timeout=1800,
+debug=[],
+deepspeed=/root/autodl-tmp/a00_Firefly/train_args/ds_z3_config.json,
+disable_tqdm=False,
+dispatch_batches=None,
+do_eval=False,
+do_predict=False,
+do_train=False,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_steps=None,
+evaluation_strategy=no,
+fp16=False,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[],
+fsdp_config={'min_num_params': 0, 'xla': False, 'xla_fsdp_grad_ckpt': False},
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_determinism=False,
+gradient_accumulation_steps=16,
+gradient_checkpointing=True,
+gradient_checkpointing_kwargs=None,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_always_push=False,
+hub_model_id=None,
+hub_private_repo=False,
+hub_strategy=every_save,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_inputs_for_metrics=False,
+include_num_input_tokens_seen=False,
+include_tokens_per_second=False,
+jit_mode_eval=False,
+label_names=None,
+label_smoothing_factor=0.0,
+learning_rate=1e-05,
+length_column_name=length,
+load_best_model_at_end=False,
+local_rank=0,
+log_level=passive,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=/root/autodl-tmp/a00_Firefly/backup/firefly-qwen-7b-sft-full/runs/Aug23_01-28-19_autodl-container-cb894da57f-a443dfdc,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=1,
+logging_strategy=steps,
+lr_scheduler_kwargs={},
+lr_scheduler_type=cosine,
+max_grad_norm=1.0,
+max_steps=-1,
+metric_for_best_model=None,
+mp_parameters=,
+neftune_noise_alpha=None,
+no_cuda=False,
+num_train_epochs=5,
+optim=adamw_hf,
+optim_args=None,
+output_dir=/root/autodl-tmp/a00_Firefly/backup/firefly-qwen-7b-sft-full,
+overwrite_output_dir=False,
+past_index=-1,
+per_device_eval_batch_size=8,
+per_device_train_batch_size=1,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+ray_scope=last,
+remove_unused_columns=False,
+report_to=['tensorboard'],
+resume_from_checkpoint=None,
+run_name=/root/autodl-tmp/a00_Firefly/backup/firefly-qwen-7b-sft-full,
+save_on_each_node=False,
+save_only_model=True,
+save_safetensors=True,
+save_steps=500,
+save_strategy=steps,
+save_total_limit=1,
+seed=42,
+skip_memory_metrics=True,
+split_batches=False,
+tf32=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+use_cpu=False,
+use_ipex=False,
+use_legacy_prediction_loop=False,
+use_mps_device=False,
+warmup_ratio=0.02,
+warmup_steps=0,
+weight_decay=0,
+)
+2024-08-23 01:28:20.406 | INFO     | __main__:setup_everything:57 - train_args:TrainingArguments(
+_n_gpu=1,
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+auto_find_batch_size=False,
+bf16=True,
+bf16_full_eval=False,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_persistent_workers=False,
+dataloader_pin_memory=True,
+ddp_backend=None,
+ddp_broadcast_buffers=None,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+ddp_timeout=1800,
+debug=[],
+deepspeed=/root/autodl-tmp/a00_Firefly/train_args/ds_z3_config.json,
+disable_tqdm=False,
+dispatch_batches=None,
+do_eval=False,
+do_predict=False,
+do_train=False,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_steps=None,
+evaluation_strategy=no,
+fp16=False,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[],
+fsdp_config={'min_num_params': 0, 'xla': False, 'xla_fsdp_grad_ckpt': False},
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_determinism=False,
+gradient_accumulation_steps=16,
+gradient_checkpointing=True,
+gradient_checkpointing_kwargs=None,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_always_push=False,
+hub_model_id=None,
+hub_private_repo=False,
+hub_strategy=every_save,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_inputs_for_metrics=False,
+include_num_input_tokens_seen=False,
+include_tokens_per_second=False,
+jit_mode_eval=False,
+label_names=None,
+label_smoothing_factor=0.0,
+learning_rate=1e-05,
+length_column_name=length,
+load_best_model_at_end=False,
+local_rank=1,
+log_level=passive,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=/root/autodl-tmp/a00_Firefly/backup/firefly-qwen-7b-sft-full/runs/Aug23_01-28-19_autodl-container-cb894da57f-a443dfdc,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=1,
+logging_strategy=steps,
+lr_scheduler_kwargs={},
+lr_scheduler_type=cosine,
+max_grad_norm=1.0,
+max_steps=-1,
+metric_for_best_model=None,
+mp_parameters=,
+neftune_noise_alpha=None,
+no_cuda=False,
+num_train_epochs=5,
+optim=adamw_hf,
+optim_args=None,
+output_dir=/root/autodl-tmp/a00_Firefly/backup/firefly-qwen-7b-sft-full,
+overwrite_output_dir=False,
+past_index=-1,
+per_device_eval_batch_size=8,
+per_device_train_batch_size=1,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+ray_scope=last,
+remove_unused_columns=False,
+report_to=['tensorboard'],
+resume_from_checkpoint=None,
+run_name=/root/autodl-tmp/a00_Firefly/backup/firefly-qwen-7b-sft-full,
+save_on_each_node=False,
+save_only_model=True,
+save_safetensors=True,
+save_steps=500,
+save_strategy=steps,
+save_total_limit=1,
+seed=42,
+skip_memory_metrics=True,
+split_batches=False,
+tf32=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+use_cpu=False,
+use_ipex=False,
+use_legacy_prediction_loop=False,
+use_mps_device=False,
+warmup_ratio=0.02,
+warmup_steps=0,
+weight_decay=0,
+)
+2024-08-23 01:28:20.406 | INFO     | __main__:init_components:369 - Initializing components...
+2024-08-23 01:28:20.406 | INFO     | __main__:setup_everything:57 - train_args:TrainingArguments(
+_n_gpu=1,
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+auto_find_batch_size=False,
+bf16=True,
+bf16_full_eval=False,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_persistent_workers=False,
+dataloader_pin_memory=True,
+ddp_backend=None,
+ddp_broadcast_buffers=None,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+ddp_timeout=1800,
+debug=[],
+deepspeed=/root/autodl-tmp/a00_Firefly/train_args/ds_z3_config.json,
+disable_tqdm=False,
+dispatch_batches=None,
+do_eval=False,
+do_predict=False,
+do_train=False,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_steps=None,
+evaluation_strategy=no,
+fp16=False,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[],
+fsdp_config={'min_num_params': 0, 'xla': False, 'xla_fsdp_grad_ckpt': False},
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_determinism=False,
+gradient_accumulation_steps=16,
+gradient_checkpointing=True,
+gradient_checkpointing_kwargs=None,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_always_push=False,
+hub_model_id=None,
+hub_private_repo=False,
+hub_strategy=every_save,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_inputs_for_metrics=False,
+include_num_input_tokens_seen=False,
+include_tokens_per_second=False,
+jit_mode_eval=False,
+label_names=None,
+label_smoothing_factor=0.0,
+learning_rate=1e-05,
+length_column_name=length,
+load_best_model_at_end=False,
+local_rank=3,
+log_level=passive,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=/root/autodl-tmp/a00_Firefly/backup/firefly-qwen-7b-sft-full/runs/Aug23_01-28-19_autodl-container-cb894da57f-a443dfdc,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=1,
+logging_strategy=steps,
+lr_scheduler_kwargs={},
+lr_scheduler_type=cosine,
+max_grad_norm=1.0,
+max_steps=-1,
+metric_for_best_model=None,
+mp_parameters=,
+neftune_noise_alpha=None,
+no_cuda=False,
+num_train_epochs=5,
+optim=adamw_hf,
+optim_args=None,
+output_dir=/root/autodl-tmp/a00_Firefly/backup/firefly-qwen-7b-sft-full,
+overwrite_output_dir=False,
+past_index=-1,
+per_device_eval_batch_size=8,
+per_device_train_batch_size=1,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+ray_scope=last,
+remove_unused_columns=False,
+report_to=['tensorboard'],
+resume_from_checkpoint=None,
+run_name=/root/autodl-tmp/a00_Firefly/backup/firefly-qwen-7b-sft-full,
+save_on_each_node=False,
+save_only_model=True,
+save_safetensors=True,
+save_steps=500,
+save_strategy=steps,
+save_total_limit=1,
+seed=42,
+skip_memory_metrics=True,
+split_batches=False,
+tf32=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+use_cpu=False,
+use_ipex=False,
+use_legacy_prediction_loop=False,
+use_mps_device=False,
+warmup_ratio=0.02,
+warmup_steps=0,
+weight_decay=0,
+)
+2024-08-23 01:28:20.407 | INFO     | __main__:init_components:369 - Initializing components...
+2024-08-23 01:28:20.407 | INFO     | __main__:init_components:369 - Initializing components...
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+2024-08-23 01:28:20.618 | INFO     | __main__:load_tokenizer:217 - vocab_size of tokenizer: 151643
+2024-08-23 01:28:20.619 | INFO     | __main__:load_model:256 - Loading model from base model: /root/autodl-tmp/Qwen2-7B-Instruct
+2024-08-23 01:28:20.619 | INFO     | __main__:load_model:257 - Train model with full
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+2024-08-23 01:28:20.621 | INFO     | __main__:load_tokenizer:217 - vocab_size of tokenizer: 151643
+2024-08-23 01:28:20.621 | INFO     | __main__:load_model:256 - Loading model from base model: /root/autodl-tmp/Qwen2-7B-Instruct
+2024-08-23 01:28:20.621 | INFO     | __main__:load_model:257 - Train model with full
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+2024-08-23 01:28:20.629 | INFO     | __main__:load_tokenizer:217 - vocab_size of tokenizer: 151643
+2024-08-23 01:28:20.629 | INFO     | __main__:load_model:256 - Loading model from base model: /root/autodl-tmp/Qwen2-7B-Instruct
+2024-08-23 01:28:20.629 | INFO     | __main__:load_model:257 - Train model with full
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+2024-08-23 01:28:20.631 | INFO     | __main__:load_tokenizer:217 - vocab_size of tokenizer: 151643
+2024-08-23 01:28:20.631 | INFO     | __main__:load_model:256 - Loading model from base model: /root/autodl-tmp/Qwen2-7B-Instruct
+2024-08-23 01:28:20.631 | INFO     | __main__:load_model:257 - Train model with full
+[2024-08-23 01:28:38,468] [INFO] [partition_parameters.py:453:__exit__] finished initializing model with 7.62B parameters
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:02<00:08,  2.78s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:02<00:08,  2.79s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:02<00:08,  2.80s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:02<00:08,  2.91s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:05<00:05,  2.76s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:05<00:05,  2.76s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:05<00:05,  2.76s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:05<00:05,  2.82s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:08<00:02,  2.75s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:08<00:02,  2.75s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:08<00:02,  2.75s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:08<00:02,  2.76s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:10<00:00,  2.63s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:10<00:00,  2.68s/it]
+2024-08-23 01:28:49.282 | INFO     | __main__:load_model:331 - Total model params: 0.00M
+2024-08-23 01:28:49.283 | INFO     | __main__:init_components:388 - Train model with sft task
+2024-08-23 01:28:49.283 | INFO     | __main__:load_sft_dataset:351 - Loading data with UnifiedSFTDataset
+2024-08-23 01:28:49.283 | INFO     | component.dataset:__init__:20 - Loading data: /root/autodl-tmp/a00_Firefly/data/train_merge_cot_025.jsonl
+Loading checkpoint shards: 100%|██████████| 4/4 [00:10<00:00,  2.64s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:10<00:00,  2.64s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:10<00:00,  2.68s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:10<00:00,  2.68s/it]
+
+2024-08-23 01:28:49.296 | INFO     | __main__:load_model:331 - Total model params: 0.00M
+2024-08-23 01:28:49.296 | INFO     | __main__:load_model:331 - Total model params: 0.00M
+2024-08-23 01:28:49.296 | INFO     | __main__:init_components:388 - Train model with sft task
+2024-08-23 01:28:49.296 | INFO     | __main__:init_components:388 - Train model with sft task
+2024-08-23 01:28:49.296 | INFO     | __main__:load_sft_dataset:351 - Loading data with UnifiedSFTDataset
+2024-08-23 01:28:49.296 | INFO     | __main__:load_sft_dataset:351 - Loading data with UnifiedSFTDataset
+2024-08-23 01:28:49.296 | INFO     | component.dataset:__init__:20 - Loading data: /root/autodl-tmp/a00_Firefly/data/train_merge_cot_025.jsonl
+2024-08-23 01:28:49.297 | INFO     | component.dataset:__init__:20 - Loading data: /root/autodl-tmp/a00_Firefly/data/train_merge_cot_025.jsonl
+Loading checkpoint shards: 100%|██████████| 4/4 [00:10<00:00,  2.63s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:10<00:00,  2.70s/it]
+2024-08-23 01:28:49.328 | INFO     | __main__:load_model:331 - Total model params: 0.00M
+2024-08-23 01:28:49.328 | INFO     | __main__:init_components:388 - Train model with sft task
+2024-08-23 01:28:49.329 | INFO     | __main__:load_sft_dataset:351 - Loading data with UnifiedSFTDataset
+2024-08-23 01:28:49.329 | INFO     | component.dataset:__init__:20 - Loading data: /root/autodl-tmp/a00_Firefly/data/train_merge_cot_025.jsonl
+2024-08-23 01:28:49.341 | INFO     | component.dataset:__init__:23 - Use template "qwen" for training
+2024-08-23 01:28:49.341 | INFO     | component.dataset:__init__:24 - There are 4577 data in dataset
+len(train_dataset):4577
+t_total:360
+training_args.save_steps:360
+training_args.warmup_steps:7
+2024-08-23 01:28:49.354 | INFO     | component.dataset:__init__:23 - Use template "qwen" for training
+2024-08-23 01:28:49.354 | INFO     | component.dataset:__init__:23 - Use template "qwen" for training
+2024-08-23 01:28:49.354 | INFO     | component.dataset:__init__:24 - There are 4577 data in dataset
+2024-08-23 01:28:49.354 | INFO     | component.dataset:__init__:24 - There are 4577 data in dataset
+/root/miniconda3/lib/python3.8/site-packages/accelerate/accelerator.py:451: FutureWarning: Passing the following arguments to `Accelerator` is deprecated and will be removed in version 1.0 of Accelerate: dict_keys(['dispatch_batches', 'split_batches']). Please pass an `accelerate.DataLoaderConfiguration` instead: 
+dataloader_config = DataLoaderConfiguration(dispatch_batches=None, split_batches=False)
+  warnings.warn(
+len(train_dataset):4577
+t_total:360
+len(train_dataset):4577training_args.save_steps:360
+
+t_total:360training_args.warmup_steps:7
+
+training_args.save_steps:360
+training_args.warmup_steps:7
+/root/miniconda3/lib/python3.8/site-packages/accelerate/accelerator.py:451: FutureWarning: Passing the following arguments to `Accelerator` is deprecated and will be removed in version 1.0 of Accelerate: dict_keys(['dispatch_batches', 'split_batches']). Please pass an `accelerate.DataLoaderConfiguration` instead: 
+dataloader_config = DataLoaderConfiguration(dispatch_batches=None, split_batches=False)
+  warnings.warn(
+/root/miniconda3/lib/python3.8/site-packages/accelerate/accelerator.py:451: FutureWarning: Passing the following arguments to `Accelerator` is deprecated and will be removed in version 1.0 of Accelerate: dict_keys(['dispatch_batches', 'split_batches']). Please pass an `accelerate.DataLoaderConfiguration` instead: 
+dataloader_config = DataLoaderConfiguration(dispatch_batches=None, split_batches=False)
+  warnings.warn(
+2024-08-23 01:28:49.386 | INFO     | __main__:main:440 - *** starting training ***
+2024-08-23 01:28:49.387 | INFO     | component.dataset:__init__:23 - Use template "qwen" for training
+2024-08-23 01:28:49.387 | INFO     | component.dataset:__init__:24 - There are 4577 data in dataset
+len(train_dataset):4577
+t_total:360
+training_args.save_steps:360
+training_args.warmup_steps:7
+2024-08-23 01:28:49.398 | INFO     | __main__:main:440 - *** starting training ***
+2024-08-23 01:28:49.398 | INFO     | __main__:main:440 - *** starting training ***
+/root/miniconda3/lib/python3.8/site-packages/accelerate/accelerator.py:451: FutureWarning: Passing the following arguments to `Accelerator` is deprecated and will be removed in version 1.0 of Accelerate: dict_keys(['dispatch_batches', 'split_batches']). Please pass an `accelerate.DataLoaderConfiguration` instead: 
+dataloader_config = DataLoaderConfiguration(dispatch_batches=None, split_batches=False)
+  warnings.warn(
+Detected kernel version 4.19.90, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+2024-08-23 01:28:49.432 | INFO     | __main__:main:440 - *** starting training ***
+Parameter Offload: Total persistent parameters: 333312 in 141 params
+  0%|          | 0/355 [00:00<?, ?it/s]  0%|          | 1/355 [01:11<7:02:34, 71.62s/it]                                                 {'loss': 0.6262, 'learning_rate': 1.4285714285714286e-06, 'epoch': 0.01}
+  0%|          | 1/355 [01:11<7:02:34, 71.62s/it]  1%|          | 2/355 [02:16<6:38:31, 67.74s/it]                                                 {'loss': 0.5374, 'learning_rate': 2.8571428571428573e-06, 'epoch': 0.03}
+  1%|          | 2/355 [02:16<6:38:31, 67.74s/it]  1%|          | 3/355 [03:23<6:34:12, 67.19s/it]                                                 {'loss': 0.7868, 'learning_rate': 4.2857142857142855e-06, 'epoch': 0.04}
+  1%|          | 3/355 [03:23<6:34:12, 67.19s/it]  1%|          | 4/355 [04:30<6:33:40, 67.29s/it]                                                 {'loss': 0.4849, 'learning_rate': 5.7142857142857145e-06, 'epoch': 0.06}
+  1%|          | 4/355 [04:30<6:33:40, 67.29s/it]  1%|▏         | 5/355 [05:35<6:27:57, 66.51s/it]                                                 {'loss': 0.6413, 'learning_rate': 7.1428571428571436e-06, 'epoch': 0.07}
+  1%|▏         | 5/355 [05:35<6:27:57, 66.51s/it]  2%|▏         | 6/355 [06:42<6:26:40, 66.48s/it]                                                 {'loss': 0.3888, 'learning_rate': 8.571428571428571e-06, 'epoch': 0.08}
+  2%|▏         | 6/355 [06:42<6:26:40, 66.48s/it]  2%|▏         | 7/355 [07:47<6:23:31, 66.12s/it]                                                 {'loss': 0.3977, 'learning_rate': 1e-05, 'epoch': 0.1}
+  2%|▏         | 7/355 [07:47<6:23:31, 66.12s/it]WARNING:torch.distributed.elastic.agent.server.api:Received 1 death signal, shutting down workers
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 28134 closing signal SIGHUP
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 28135 closing signal SIGHUP
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 28136 closing signal SIGHUP
+WARNING:torch.distributed.elastic.multiprocessing.api:Sending process 28137 closing signal SIGHUP
+Traceback (most recent call last):
+  File "/root/miniconda3/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 346, in wrapper
+    return f(*args, **kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/distributed/run.py", line 762, in main
+    run(args)
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/distributed/run.py", line 753, in run
+    elastic_launch(
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/distributed/launcher/api.py", line 132, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/distributed/launcher/api.py", line 237, in launch_agent
+    result = agent.run()
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/distributed/elastic/metrics/api.py", line 129, in wrapper
+    result = f(*args, **kwargs)
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/distributed/elastic/agent/server/api.py", line 709, in run
+    result = self._invoke_run(role)
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/distributed/elastic/agent/server/api.py", line 850, in _invoke_run
+    time.sleep(monitor_interval)
+  File "/root/miniconda3/lib/python3.8/site-packages/torch/distributed/elastic/multiprocessing/api.py", line 62, in _terminate_process_handler
+    raise SignalException(f"Process {os.getpid()} got signal: {sigval}", sigval=sigval)
+torch.distributed.elastic.multiprocessing.api.SignalException: Process 28075 got signal: 1

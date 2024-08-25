@@ -7,6 +7,7 @@ class UnifiedSFTDataset(Dataset):
     """
     统一的数据处理dataset
     """
+
     def __init__(self, file, tokenizer, max_seq_length, template):
         self.tokenizer = tokenizer
         self.template_name = template.template_name
@@ -34,24 +35,51 @@ class UnifiedSFTDataset(Dataset):
 
         # setting system information
         if self.system_format is not None:
-            system = data['system'].strip() if 'system' in data.keys() else self.system
+            # system = data['system'].strip() if 'system' in data.keys() else self.system
+            if data['conversations'][0]['from'] == 'system':
+                system = data['conversations'][0]['value']
+            else:
+                system = self.system
             # system信息不为空
             if system is not None:
                 system_text = self.system_format.format(content=system)
-                input_ids = self.tokenizer.encode(system_text, add_special_tokens=False)
+                input_ids = self.tokenizer.encode(system_text,
+                                                  add_special_tokens=False)
                 target_mask = [0] * len(input_ids)
+        # print(f'system:{system}')
 
-        conversations = data['conversation']
+        conversations = data['conversations']
+        # print(f'conversations:{conversations}')
         # 拼接多轮对话
-        for i, conv in enumerate(conversations):
-            human = conv['human'].strip()
-            assistant = conv['assistant'].strip()
+        # for i, conv in enumerate(conversations):
+        #     human = conv['human'].strip()
+        #     assistant = conv['assistant'].strip()
+        for ids in range(len(conversations), 0, -2):
+            # human = conv['human'].strip()
+            # assistant = conv['assistant'].strip()
 
-            human = self.user_format.format(content=human, stop_token=self.tokenizer.eos_token)
-            assistant = self.assistant_format.format(content=assistant, stop_token=self.tokenizer.eos_token)
+            assistant_round = conversations[ids - 1]
+            if isinstance(assistant_round['value'], dict):
+                assistant = assistant_round['value'] = json.dumps(
+                    assistant_round['value'], ensure_ascii=False)
 
-            input_tokens = self.tokenizer.encode(human, add_special_tokens=False)
-            output_tokens = self.tokenizer.encode(assistant, add_special_tokens=False)
+            user_round = conversations[ids - 2]
+            human = user_round['value'].strip()
+            assistant = assistant_round['value'].strip()
+
+            human = self.user_format.format(
+                content=human, stop_token=self.tokenizer.eos_token)
+            assistant = self.assistant_format.format(
+                content=assistant, stop_token=self.tokenizer.eos_token)
+
+            # print(f'human:{human}')
+            # print('\n')
+            # print(f'assistant:{assistant}')
+
+            input_tokens = self.tokenizer.encode(human,
+                                                 add_special_tokens=False)
+            output_tokens = self.tokenizer.encode(assistant,
+                                                  add_special_tokens=False)
 
             input_ids += input_tokens + output_tokens
             target_mask += [0] * len(input_tokens) + [1] * len(output_tokens)
@@ -89,8 +117,11 @@ class ChatGLM2SFTDataset(UnifiedSFTDataset):
             human = self.user_format.format(content=human, idx=i + 1)
             assistant = self.assistant_format.format(content=assistant)
 
-            input_tokens = self.tokenizer.encode(human, add_special_tokens=False)
-            output_tokens = self.tokenizer.encode(assistant, add_special_tokens=False) + [self.tokenizer.eos_token_id]
+            input_tokens = self.tokenizer.encode(human,
+                                                 add_special_tokens=False)
+            output_tokens = self.tokenizer.encode(
+                assistant,
+                add_special_tokens=False) + [self.tokenizer.eos_token_id]
 
             input_ids += input_tokens + output_tokens
             target_mask += [0] * len(input_tokens) + [1] * len(output_tokens)
@@ -115,13 +146,14 @@ class ChatGLM3SFTDataset(UnifiedSFTDataset):
         # [gMASK]sop <|system|>xxx<|user|>xxx<|assistant|>xxx<eos>
         data = self.data_list[index]
         data = json.loads(data)
-        system = data['system'].strip() if 'system' in data.keys() else self.system
+        system = data['system'].strip() if 'system' in data.keys(
+        ) else self.system
         input_ids = self.tokenizer.get_prefix_tokens() + \
                     [self.tokenizer.get_command(f"<|system|>")] + \
                     self.tokenizer.encode(system, add_special_tokens=False)
         target_mask = [0] * len(input_ids)
 
-        conversations = data['conversation']
+        conversations = data['conversations']
         # 拼接多轮对话
         for i, conv in enumerate(conversations):
             human = conv['human'].strip()
@@ -130,7 +162,9 @@ class ChatGLM3SFTDataset(UnifiedSFTDataset):
             input_tokens = [self.tokenizer.get_command(f"<|user|>")] + \
                            self.tokenizer.encode(human, add_special_tokens=False) + \
                            [self.tokenizer.get_command(f"<|assistant|>")]
-            output_tokens = self.tokenizer.encode(assistant, add_special_tokens=False) + [self.tokenizer.eos_token_id]
+            output_tokens = self.tokenizer.encode(
+                assistant,
+                add_special_tokens=False) + [self.tokenizer.eos_token_id]
 
             input_ids += input_tokens + output_tokens
             target_mask += [0] * len(input_tokens) + [1] * len(output_tokens)
@@ -153,7 +187,9 @@ class UnifiedDPODataset(Dataset):
     """
     统一的DPO数据集
     """
-    def __init__(self, file, tokenizer, max_seq_length, max_prompt_length, template):
+
+    def __init__(self, file, tokenizer, max_seq_length, max_prompt_length,
+                 template):
         self.tokenizer = tokenizer
         self.template_name = template.template_name
         self.system_format = template.system_format
@@ -191,10 +227,13 @@ class UnifiedDPODataset(Dataset):
             # system信息不为空
             if system is not None:
                 if self.template_name == 'chatglm3':
-                    prompt_input_ids += [self.tokenizer.get_command(f"<|system|>")] + self.tokenizer.encode(system, add_special_tokens=False)
+                    prompt_input_ids += [
+                        self.tokenizer.get_command(f"<|system|>")
+                    ] + self.tokenizer.encode(system, add_special_tokens=False)
                 else:
                     system_text = self.system_format.format(content=system)
-                    prompt_input_ids += self.tokenizer.encode(system_text, add_special_tokens=False)
+                    prompt_input_ids += self.tokenizer.encode(
+                        system_text, add_special_tokens=False)
 
         # collect history
         for i, conv in enumerate(history):
@@ -204,21 +243,30 @@ class UnifiedDPODataset(Dataset):
             assert role != 'system', 'there should not be more than one system information'
             if role == 'user':
                 if self.template_name == 'chatglm2':
-                    human = self.user_format.format(content=content, idx=i//2 + 1)
-                    input_ids = self.tokenizer.encode(human, add_special_tokens=False)
+                    human = self.user_format.format(content=content,
+                                                    idx=i // 2 + 1)
+                    input_ids = self.tokenizer.encode(human,
+                                                      add_special_tokens=False)
                 elif self.template_name == 'chatglm3':
                     input_ids = [self.tokenizer.get_command(f"<|user|>")] + \
                                 self.tokenizer.encode(content, add_special_tokens=False) + \
                                 [self.tokenizer.get_command(f"<|assistant|>")]
                 else:
-                    human = self.user_format.format(content=content, stop_token=self.tokenizer.eos_token)
-                    input_ids = self.tokenizer.encode(human, add_special_tokens=False)
+                    human = self.user_format.format(
+                        content=content, stop_token=self.tokenizer.eos_token)
+                    input_ids = self.tokenizer.encode(human,
+                                                      add_special_tokens=False)
             elif role == 'assistant':
                 if self.template_name in ['chatglm2', 'chatglm3']:
-                    input_ids = self.tokenizer.encode(content, add_special_tokens=False) + [self.tokenizer.eos_token_id]
+                    input_ids = self.tokenizer.encode(
+                        content, add_special_tokens=False) + [
+                            self.tokenizer.eos_token_id
+                        ]
                 else:
-                    assistant = self.assistant_format.format(content=content, stop_token=self.tokenizer.eos_token)
-                    input_ids = self.tokenizer.encode(assistant, add_special_tokens=False)
+                    assistant = self.assistant_format.format(
+                        content=content, stop_token=self.tokenizer.eos_token)
+                    input_ids = self.tokenizer.encode(assistant,
+                                                      add_special_tokens=False)
             else:
                 raise Exception('role error')
             prompt_input_ids += input_ids
@@ -247,25 +295,41 @@ class UnifiedDPODataset(Dataset):
 
         # build response
         if self.template_name in ['chatglm2', 'chatglm3']:
-            chosen_input_ids = self.tokenizer.encode(chosen['content'], add_special_tokens=False) + [self.tokenizer.eos_token_id]
-            rejected_input_ids = self.tokenizer.encode(rejected['content'], add_special_tokens=False) + [self.tokenizer.eos_token_id]
+            chosen_input_ids = self.tokenizer.encode(
+                chosen['content'],
+                add_special_tokens=False) + [self.tokenizer.eos_token_id]
+            rejected_input_ids = self.tokenizer.encode(
+                rejected['content'],
+                add_special_tokens=False) + [self.tokenizer.eos_token_id]
         else:
-            chosen = self.assistant_format.format(content=chosen['content'], stop_token=self.tokenizer.eos_token)
-            rejected = self.assistant_format.format(content=rejected['content'], stop_token=self.tokenizer.eos_token)
+            chosen = self.assistant_format.format(
+                content=chosen['content'], stop_token=self.tokenizer.eos_token)
+            rejected = self.assistant_format.format(
+                content=rejected['content'],
+                stop_token=self.tokenizer.eos_token)
 
-            chosen_input_ids = self.tokenizer.encode(chosen, add_special_tokens=False)
-            rejected_input_ids = self.tokenizer.encode(rejected, add_special_tokens=False)
+            chosen_input_ids = self.tokenizer.encode(chosen,
+                                                     add_special_tokens=False)
+            rejected_input_ids = self.tokenizer.encode(
+                rejected, add_special_tokens=False)
 
         # truncate by max_seq_length
-        longer_response_length = max(len(chosen_input_ids), len(rejected_input_ids))
+        longer_response_length = max(len(chosen_input_ids),
+                                     len(rejected_input_ids))
         # if combined sequence is too long, truncate the prompt
-        if len(prompt_input_ids) + longer_response_length > self.max_seq_length:
-            max_prompt_length = max(self.max_prompt_length, self.max_seq_length - longer_response_length)
+        if len(prompt_input_ids
+               ) + longer_response_length > self.max_seq_length:
+            max_prompt_length = max(
+                self.max_prompt_length,
+                self.max_seq_length - longer_response_length)
             prompt_input_ids = prompt_input_ids[-max_prompt_length:]
         # if that's still too long, truncate the response
-        if len(prompt_input_ids) + longer_response_length > self.max_seq_length:
-            chosen_input_ids = chosen_input_ids[: self.max_seq_length - len(prompt_input_ids)]
-            rejected_input_ids = rejected_input_ids[: self.max_seq_length - len(prompt_input_ids)]
+        if len(prompt_input_ids
+               ) + longer_response_length > self.max_seq_length:
+            chosen_input_ids = chosen_input_ids[:self.max_seq_length -
+                                                len(prompt_input_ids)]
+            rejected_input_ids = rejected_input_ids[:self.max_seq_length -
+                                                    len(prompt_input_ids)]
 
         chosen_labels = [-100] * len(prompt_input_ids) + chosen_input_ids
         chosen_input_ids = prompt_input_ids + chosen_input_ids
@@ -276,12 +340,12 @@ class UnifiedDPODataset(Dataset):
 
         inputs = dict(
             prompt_input_ids=prompt_input_ids,
-            prompt_attention_mask=[1]*len(prompt_input_ids),
+            prompt_attention_mask=[1] * len(prompt_input_ids),
             chosen_input_ids=chosen_input_ids,
-            chosen_attention_mask=[1]*len(chosen_input_ids),
+            chosen_attention_mask=[1] * len(chosen_input_ids),
             chosen_labels=chosen_labels,
             rejected_input_ids=rejected_input_ids,
-            rejected_attention_mask=[1]*len(rejected_input_ids),
+            rejected_attention_mask=[1] * len(rejected_input_ids),
             rejected_labels=rejected_labels,
         )
         return inputs

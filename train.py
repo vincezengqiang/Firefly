@@ -2,7 +2,7 @@ import argparse
 from loguru import logger
 import os
 from os.path import join
-import torch
+import torch,math
 from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
 import bitsandbytes as bnb
 from component.collator import PretrainCollator, SFTDataCollator
@@ -393,18 +393,32 @@ def init_components(args, training_args):
         train_dataset = load_dpo_dataset(args, tokenizer)
         data_collator = None
 
+    train_nums = len(train_dataset)
+    num_gpus = torch.cuda.device_count()
+    batch_size = training_args.per_device_train_batch_size * training_args.world_size * training_args.gradient_accumulation_steps
+    t_total = math.ceil(
+        train_nums / batch_size) * training_args.num_train_epochs
+    training_args.save_steps = math.floor(
+        t_total // min(training_args.save_total_limit, 5))
+    training_args.warmup_steps = int(
+        t_total * training_args.warmup_ratio
+    ) if training_args.warmup_ratio > 0 else training_args.warnup_steps
+
+    print(f'len(train_dataset):{len(train_dataset)}')
+    print(f't_total:{t_total}')
+    print(f'training_args.save_steps:{training_args.save_steps}')
+    print(f'training_args.warmup_steps:{training_args.warmup_steps}')
+
     # dpo
     if args.task_type == 'dpo':
-        trainer = DPOTrainer(
-            model,
-            ref_model,
-            args=training_args,
-            beta=args.beta,
-            train_dataset=train_dataset,
-            data_collator=data_collator,
-            tokenizer=tokenizer,
-            peft_config=peft_config
-        )
+        trainer = DPOTrainer(model,
+                             ref_model,
+                             args=training_args,
+                             beta=args.beta,
+                             train_dataset=train_dataset,
+                             data_collator=data_collator,
+                             tokenizer=tokenizer,
+                             peft_config=peft_config)
     # pretrain or sft
     else:
         trainer = Trainer(
@@ -425,14 +439,17 @@ def main():
     # 开始训练
     logger.info("*** starting training ***")
     train_result = trainer.train()
-    # 保存最好的checkpoint
-    final_save_path = join(training_args.output_dir)
+    # 保存最后的checkpoint
+    final_save_path = join(training_args.output_dir,'final')
     trainer.save_model(final_save_path)  # Saves the tokenizer too
     # 保存训练指标
     metrics = train_result.metrics
     trainer.log_metrics("train", metrics)
     trainer.save_metrics("train", metrics)
     trainer.save_state()
+
+    print(f'args.model_name_or_path:{args.model_name_or_path,}')
+    print(f'final_save_path:{final_save_path,}')
 
 
 if __name__ == "__main__":
