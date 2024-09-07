@@ -65,7 +65,7 @@ if __name__ == '__main__':
     des_file = '/root/autodl-tmp/a00_Firefly/data/res/train_merge_cot_025_res.jsonl'
     data = read_jsonl(test_file)
 
-    model_name_or_path = '/root/autodl-tmp/a00_Firefly/backup/firefly-qwen-7b-sft-full/final'
+    model_name_or_path = '/root/autodl-tmp/firefly-qwen-7b-sft-full/final'
     # model_name_or_path = '/root/autodl-tmp/Qwen2-7B-Instruct'
     adapter_name_or_path = None
 
